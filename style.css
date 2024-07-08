@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+
+    --background-dark: #000;
+    --background-light: #fff;
+
+    --text-color-dark: #fff;
+    --text-color-light: #000;
+
+
+    --background-table-light: #067094;
+
+    --button-color: #0ba0d1;
+    --button-color-hover: #065E7C;
+
+}
+
+html.light {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+html:not(.light) {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 3.2rem;
+}
+
+html.light .title {
+    color: var(--text-color-light);
+}
+
+html:not(.light) .title {
+    color: var(--text-color-dark);
+}
+
+header .searchField {
+    display: flex;
+    margin: 1.6rem 0 auto;
+}
+
+header input {
+    border-radius: .5rem 0 0 .5rem;
+    border: none;
+
+
+    padding: .5rem;
+
+
+    color: var(--text-color-dark);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+html.light input {
+    background-color: var(--button-color);
+}
+
+html:not(.light) input {
+    background-color: var(--button-color-hover);
+}
+
+header input::placeholder {
+    color: var(--text-color-dark);
+}
+
+header button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: .8rem;
+
+    gap: .8rem;
+
+    border-radius: 0 .5rem .5rem 0;
+    border: none;
+
+
+    color: var(--text-color-dark);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background 2s;
+}
+
+html.light button {
+    background-color: var(--button-color);
+    border-left: 2px solid #000;
+}
+
+html.light button:hover {
+    background: var(--button-color-hover);
+}
+
+html:not(.light) button {
+    background-color: var(--button-color-hover);
+    border-left: 2px solid #fff;
+}
+
+html:not(.light) button:hover {
+    background: var(--button-color);
+}
+
+.iconsTheme {
+    position: fixed;
+    top: .8rem;
+    right: 1rem;
+    font-size: 3.2rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 2.4rem auto;
+    color: var(--text-color-dark);
+    text-align: left;
+}
+
+table th {
+    color: var(--text-color-dark);
+    padding: 1rem .8rem;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+}
+
+html.light table th {
+    background-color: var(--button-color);
+    border-bottom: 2px solid #000;
+}
+
+html:not(.light) table th {
+    background: #092D38;
+    border-bottom: 1px solid #fff;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+html.light th:first-child,
+html:not(.light) th:first-child {
+    border-left: none;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+html.light table th {
+    border-left: 2px solid #000;
+}
+
+html:not(.light) table th {
+    border-left: 2px solid #fff;
+}
+
+html.light table tr {
+    background: var(--background-table-light);
+}
+
+html.light table tr:nth-child(odd) {
+    background: var(--button-color-hover);
+}
+
+html:not(.light) table tr {
+    background: #06161b80;
+}
+
+html:not(.light) table tr:nth-child(odd) {
+    background: #06181C;
+}
+
+table td {
+    padding: 1.5rem;
+
+}
+
+table .user {
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    gap: .8rem;
+}
+
+table tr .user img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+table tr .user a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-dark);
+    text-decoration: none;
+
+}
+
+table tr .user a p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+table tr .user a span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+table tr .repositories,
+.followers,
+.delete {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+html.light .delete {
+    color: #ff2c3e;
+    font-weight: bolder;
+}
+
+
+html:not(.light) .delete {
+    color: #F75A68;
+}
+
+
+@media (min-width: 700px) {
+    #app {
+        max-width: 600px;
+    }
+
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .title {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin-top: 2.2rem;
+    }
+
+    .iconsTheme:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table th {
+        font-size: 1.6rem;
+        padding: 1.6rem 1rem;
+    }
+
+
+    table tr .user img {
+        width: 5.6rem;
+        height: 5.6rem;
+    }
+
+    table tr .user a p {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    table tr .user a span {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+
+
+    .delete {
+        cursor: pointer;
+    }
+
+    .delete:hover {
+        scale: 1.1;
+    }
+
+}

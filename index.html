@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git-fav</title>
+
+    <link rel="shortcut icon" href="./assets/star.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+
+        <header>
+
+            <div class="iconsTheme">
+                <i class="ph ph-sun"></i>
+                <i class="ph ph-moon"></i>
+            </div>
+
+            <div class="title">
+                <h3> <i class="ph ph-star"></i> Git-fav</h3>
+            </div>
+
+            <div class="searchField">
+                <label for="searchUser" class="sr-only">Digite o Github username que quer favoritar</label>
+                <input id="searchUser" type="text" placeholder="Pesquise o usuário">
+                <button class="add">
+                    Favoritar
+                </button>
+            </div>
+
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Repositórios</th>
+                    <th>Seguidores</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/gabrielperes2004.png" alt="Imagem do usuário">
+                        <a href="https://github.com/gabrielperes2004">
+                            <p class="name">Gabriel Peres</p>
+                            <span class="login">gabrielperes2004</span>
+                        </a>
+                    </td>
+                    <td class="repositories">
+                        <span>15</span>
+                    </td>
+
+                    <td class="followers">
+                        1
+                    </td>
+
+                    <td class="delete">
+                        <span>Remover</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/gabrielperes2004.png" alt="Imagem do usuário">
+                        <a href="https://github.com/gabrielperes2004">
+                            <p class="name">Gabriel Peres</p>
+                            <span class="login">gabrielperes2004</span>
+                        </a>
+                    </td>
+                    <td class="repositories">
+                        <span>15</span>
+                    </td>
+
+                    <td class="followers">
+                        1
+                    </td>
+
+                    <td class="delete">
+                        <span>Remover</span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+</body>
+
+</html>
