@@ -50,23 +50,23 @@ html:not(.light) .ph-moon {
 }
 
 #app {
-    max-width: 300px;
+    max-width: 400px;
     margin-inline: auto;
 }
 
 header {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+    gap: 1rem;
 }
 
 header .title {
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
-    margin-top: 3.2rem;
 }
 
 html.light .title {
@@ -79,12 +79,13 @@ html:not(.light) .title {
 
 header .searchField {
     display: flex;
-    margin: 1.6rem 0 auto;
+    align-items: center;
 }
 
 header input {
     border-radius: .5rem 0 0 .5rem;
     border: none;
+
 
 
     padding: .5rem;
@@ -93,7 +94,7 @@ header input {
     color: var(--text-color-dark);
     font-size: 1.6rem;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 2.4rem;
 }
 
 html.light input {
@@ -108,13 +109,13 @@ header input::placeholder {
     color: var(--text-color-dark);
 }
 
-header button {
+header .add {
     display: flex;
     justify-content: center;
     align-items: center;
 
 
-    padding: .8rem;
+    padding: .5rem;
 
     gap: .8rem;
 
@@ -133,32 +134,47 @@ header button {
     transition: background 2s;
 }
 
-html.light button {
+html.light .add {
     background-color: var(--button-color);
     border-left: 2px solid #000;
 }
 
-html.light button:hover {
+html.light .add:hover {
     background: var(--button-color-hover);
 }
 
-html:not(.light) button {
+html:not(.light) .add {
     background-color: var(--button-color-hover);
     border-left: 2px solid #fff;
 }
 
-html:not(.light) button:hover {
+html:not(.light) .add:hover {
     background: var(--button-color);
 }
 
 .iconsTheme {
+    border: none;
     position: fixed;
+    background: none;
     top: .8rem;
     right: 1rem;
+
+}
+
+.iconsTheme i {
     font-size: 3.2rem;
 }
 
+html.light .iconsTheme i {
+    color: var(--text-color-light);
+}
+
+html:not(.light) .iconsTheme i {
+    color: var(--text-color-dark);
+}
+
 table {
+    width: 100%;
     border-collapse: collapse;
     margin: 2.4rem auto;
     color: var(--text-color-dark);
@@ -285,12 +301,13 @@ html:not(.light) .delete {
     header {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     header .title {
         font-size: 1.6rem;
         font-weight: 900;
-        margin-top: 2.2rem;
     }
 
     .iconsTheme:hover {
