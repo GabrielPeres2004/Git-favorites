@@ -21,4 +21,4 @@ A interface conta com **modo claro e modo escuro**, proporcionando uma melhor ex
 
 ## 🔗 Acesse o projeto:
 
-[👉 Acessar GitFav](https://seu-link-deploy-aqui)
+[👉 Acessar GitFav](https://gabrielperes2004.github.io/Git-favorites/)
